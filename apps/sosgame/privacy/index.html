@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOS Game — Privacy Policy — Slafiy</title>
+<style>
+  :root {
+    --bg: #0F0F1A;
+    --surface: #1A1A2E;
+    --border: #2A2A4E;
+    --text: #E5E7EB;
+    --text-muted: #9CA3AF;
+    --purple: #A78BFA;
+    --purple-dark: #2D1A4E;
+    --link: #C084FC;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+  nav {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--surface);
+  }
+  nav .logo { font-weight: 700; letter-spacing: 2px; color: var(--text); font-size: 14px; }
+  nav a { color: var(--text-muted); text-decoration: none; margin-left: 24px; font-size: 14px; }
+  nav a:hover { color: var(--purple); }
+  main { max-width: 780px; margin: 0 auto; padding: 48px 24px 80px; }
+  .breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 8px; letter-spacing: 1px; text-transform: uppercase; }
+  .breadcrumb a { color: var(--text-muted); }
+  .breadcrumb a:hover { color: var(--purple); }
+  h1 { font-size: 36px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+  .app-badge { display: inline-flex; align-items: center; gap: 10px; background: var(--purple-dark); padding: 6px 14px; border-radius: 30px; border: 1px solid var(--purple); color: var(--purple); font-size: 13px; font-weight: 600; margin-bottom: 12px; }
+  .dates { color: var(--text-muted); font-size: 14px; margin-bottom: 32px; }
+  h2 { font-size: 22px; font-weight: 600; margin-top: 40px; margin-bottom: 16px; color: var(--purple); }
+  h3 { font-size: 17px; font-weight: 600; margin-top: 24px; margin-bottom: 12px; color: var(--text); }
+  p { margin-bottom: 14px; color: var(--text); }
+  ul { margin-left: 0; padding-left: 0; list-style: none; margin-bottom: 14px; }
+  ul li { padding-left: 20px; position: relative; margin-bottom: 8px; color: var(--text); }
+  ul li::before { content: "→"; position: absolute; left: 0; color: var(--purple); }
+  .highlight { background: var(--purple-dark); border-left: 3px solid var(--purple); padding: 14px 18px; margin: 18px 0; border-radius: 8px; }
+  .highlight strong { color: var(--purple); }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  strong { color: var(--text); font-weight: 600; }
+  .contact-block { background: var(--surface); padding: 24px; border-radius: 12px; border: 1px solid var(--border); margin-top: 24px; }
+  .contact-block h3 { margin-top: 0; color: var(--purple); }
+  footer { padding: 32px 24px; text-align: center; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; margin-top: 60px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">SLAFIY</div>
+  <div>
+    <a href="/">Home</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/support">Support</a>
+  </div>
+</nav>
+
+<main>
+  <div class="breadcrumb">
+    <a href="/privacy">Privacy</a> &rsaquo; SOS Game
+  </div>
+  <div class="app-badge">🎮 SOS Game</div>
+  <h1>SOS Game Privacy Policy</h1>
+  <div class="dates">
+    Effective: April 20, 2026<br>
+    Last updated: April 20, 2026
+  </div>
+
+  <h2>Overview</h2>
+  <p>This Privacy Policy describes the data collection and use practices specific to <strong>SOS Game by Slafiy</strong>. For general Slafiy privacy principles that apply across all our apps, see our <a href="/privacy">main Privacy Policy</a>.</p>
+
+  <div class="highlight">
+    <strong>Summary:</strong> You can play all single-player (AI) modes anonymously — no sign-in required. Online multiplayer requires Google Sign-In and stores your nickname, game state, and chat messages on our servers during active matches.
+  </div>
+
+  <h2>Information We Collect</h2>
+  
+  <h3>1. Account Information (online features only)</h3>
+  <p>If you use online multiplayer, you sign in with Google. We receive:</p>
+  <ul>
+    <li>Email address (used as a unique account identifier)</li>
+    <li>Google account display name (used only during authentication and immediately replaced by your chosen in-game nickname)</li>
+    <li>Google user ID (internal identifier)</li>
+  </ul>
+  <p><strong>AI (solo) mode requires no sign-in and no personal information at all.</strong></p>
+
+  <h3>2. Gameplay Data (online features only)</h3>
+  <p>For online matches, we store the following on Google Firebase Realtime Database:</p>
+  <ul>
+    <li>Your chosen in-game nickname</li>
+    <li>Game board state and moves during an active match</li>
+    <li>Scores and match results</li>
+    <li>Chat messages you send to your opponent</li>
+    <li>Match timestamps (creation, last move, completion)</li>
+    <li>Room type (public vs. private invitation)</li>
+  </ul>
+  <p>This data is essential for real-time multiplayer. Match data is deleted from the database when you delete the match from your "My Games" list.</p>
+
+  <h3>3. Purchase Data</h3>
+  <p>SOS Game offers an in-app purchase ("Premium Board Pack" — $0.99) that unlocks 8×8 and 16×16 board sizes. Payment processing is handled entirely by:</p>
+  <ul>
+    <li>Google Play Billing on Android</li>
+    <li>Apple App Store on iOS</li>
+  </ul>
+  <p>We only receive a confirmation that a purchase was made. We do not store or see your payment card details.</p>
+
+  <h3>4. Device Storage (local only)</h3>
+  <p>The following are stored locally on your device only (not transmitted to our servers):</p>
+  <ul>
+    <li>Your in-game nickname (to restore it on next launch)</li>
+    <li>Language preference</li>
+    <li>Premium purchase status (cached for offline access)</li>
+  </ul>
+  <p>All local data is removed when you uninstall the app.</p>
+
+  <h2>Information We Do Not Collect</h2>
+  <ul>
+    <li>Location data</li>
+    <li>Contacts, camera, microphone</li>
+    <li>Photos (except when you explicitly save a screenshot of your match)</li>
+    <li>Advertising identifiers (IDFA, AAID) — we do not show ads</li>
+    <li>Behavioral analytics or tracking across apps</li>
+    <li>Browsing history</li>
+  </ul>
+
+  <h2>How We Use Your Information</h2>
+  <ul>
+    <li>To authenticate you for online multiplayer (Google Sign-In)</li>
+    <li>To match you with opponents in public rooms</li>
+    <li>To synchronize game state between you and your opponent in real time</li>
+    <li>To deliver chat messages during matches</li>
+    <li>To process in-app purchases and unlock premium content</li>
+    <li>To respond to support requests</li>
+  </ul>
+
+  <h2>Third-Party Services</h2>
+  <p>SOS Game integrates with:</p>
+  <ul>
+    <li><strong>Google Firebase</strong> (Authentication, Realtime Database) — <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a></li>
+    <li><strong>Google Sign-In</strong> — for authentication</li>
+    <li><strong>Google Play Services</strong> (Android) — for Play Billing and sign-in</li>
+    <li><strong>Apple App Store</strong> (iOS) — for in-app purchases</li>
+  </ul>
+  <p>SOS Game also lets you share match results optionally via WhatsApp, Telegram, X, and Instagram. This sharing is initiated by you; content is then handled by those platforms under their own policies.</p>
+
+  <h2>Chat Messages</h2>
+  <p>In-game chat between you and your opponent is stored temporarily on our servers so both players can see the conversation. You are responsible for the content you send. We do not actively moderate chat content but reserve the right to remove messages or ban accounts that violate our terms (harassment, hate speech, spam, etc.).</p>
+  <p>Chat messages are automatically deleted when the associated match is deleted.</p>
+  <p>To report abusive behavior, email <a href="mailto:support@slafiy.com">support@slafiy.com</a> with the opponent's nickname, the approximate time, and a screenshot if possible.</p>
+
+  <h2>Data Retention</h2>
+  <ul>
+    <li>Active match data: kept while the match is ongoing</li>
+    <li>Finished matches: retained in your "My Games" list until you delete them</li>
+    <li>Chat messages: deleted when the associated match is deleted</li>
+    <li>Account data: retained while your account is active. On deletion request, we delete your data within 30 days.</li>
+  </ul>
+
+  <h2>Your Rights</h2>
+  <ul>
+    <li>Access the personal data we hold about you</li>
+    <li>Request correction of inaccurate data</li>
+    <li>Request deletion of your account and all match history</li>
+    <li>Withdraw consent by signing out and uninstalling the app</li>
+    <li>File a complaint with your local data protection authority</li>
+  </ul>
+  <p>To exercise any of these rights, email <a href="mailto:support@slafiy.com">support@slafiy.com</a> from the email address associated with your Google account.</p>
+
+  <h2>Children's Privacy</h2>
+  <p>SOS Game is suitable for a general audience but includes chat features. We do not knowingly collect personal information from children under 13 (or the applicable age of consent in your region). If a parent or guardian believes their child has provided personal data, please contact us and we will delete it promptly.</p>
+
+  <h2>Data Security</h2>
+  <p>We use Google Firebase, an industry-standard infrastructure that encrypts data in transit (TLS) and at rest. We recommend using a strong Google/Apple account password and enabling two-factor authentication.</p>
+
+  <h2>International Data Transfer</h2>
+  <p>Slafiy is based in Turkey. Firebase data centers are operated by Google and may be located in the European Union or the United States. By using SOS Game, you consent to this transfer.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. Changes will be reflected on this page with an updated "Last updated" date. For significant changes, we will provide notice within the app.</p>
+
+  <div class="contact-block">
+    <h3>Contact Us</h3>
+    <p>Questions or concerns about SOS Game privacy:</p>
+    <p>
+      Email: <a href="mailto:support@slafiy.com">support@slafiy.com</a><br>
+      App Support: <a href="/apps/sosgame/support">SOS Game Support</a><br>
+      Company Website: <a href="https://slafiy.com">slafiy.com</a><br>
+      Country: Turkey
+    </p>
+  </div>
+</main>
+
+<footer>
+  © 2026 Slafiy. All rights reserved. &middot; <a href="/privacy">General Privacy</a> &middot; <a href="/support">Support</a>
+</footer>
+
+</body>
+</html>
