@@ -31,100 +31,31 @@
     align-items: center;
     background: var(--surface);
   }
-  nav .logo {
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: var(--text);
-    font-size: 14px;
-  }
-  nav a {
-    color: var(--text-muted);
-    text-decoration: none;
-    margin-left: 24px;
-    font-size: 14px;
-  }
+  nav .logo { font-weight: 700; letter-spacing: 2px; color: var(--text); font-size: 14px; }
+  nav a { color: var(--text-muted); text-decoration: none; margin-left: 24px; font-size: 14px; }
   nav a:hover { color: var(--purple); }
-  main {
-    max-width: 780px;
-    margin: 0 auto;
-    padding: 48px 24px 80px;
-  }
-  .breadcrumb {
-    color: var(--text-muted);
-    font-size: 13px;
-    margin-bottom: 8px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-  h1 {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: var(--text);
-  }
-  .dates {
-    color: var(--text-muted);
-    font-size: 14px;
-    margin-bottom: 32px;
-  }
-  h2 {
-    font-size: 22px;
-    font-weight: 600;
-    margin-top: 40px;
-    margin-bottom: 16px;
-    color: var(--purple);
-  }
-  h3 {
-    font-size: 17px;
-    font-weight: 600;
-    margin-top: 24px;
-    margin-bottom: 12px;
-    color: var(--text);
-  }
+  main { max-width: 780px; margin: 0 auto; padding: 48px 24px 80px; }
+  .breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 8px; letter-spacing: 1px; text-transform: uppercase; }
+  h1 { font-size: 36px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+  .dates { color: var(--text-muted); font-size: 14px; margin-bottom: 32px; }
+  h2 { font-size: 22px; font-weight: 600; margin-top: 40px; margin-bottom: 16px; color: var(--purple); }
+  h3 { font-size: 17px; font-weight: 600; margin-top: 24px; margin-bottom: 12px; color: var(--text); }
   p { margin-bottom: 14px; color: var(--text); }
   ul { margin-left: 0; padding-left: 0; list-style: none; margin-bottom: 14px; }
-  ul li {
-    padding-left: 20px;
-    position: relative;
-    margin-bottom: 8px;
-    color: var(--text);
-  }
-  ul li::before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: var(--purple);
-  }
-  .highlight {
-    background: var(--purple-dark);
-    border-left: 3px solid var(--purple);
-    padding: 14px 18px;
-    margin: 18px 0;
-    border-radius: 8px;
-  }
+  ul li { padding-left: 20px; position: relative; margin-bottom: 8px; color: var(--text); }
+  ul li::before { content: "→"; position: absolute; left: 0; color: var(--purple); }
+  .highlight { background: var(--purple-dark); border-left: 3px solid var(--purple); padding: 14px 18px; margin: 18px 0; border-radius: 8px; }
   .highlight strong { color: var(--purple); }
   a { color: var(--link); text-decoration: none; }
   a:hover { text-decoration: underline; }
   strong { color: var(--text); font-weight: 600; }
-  .contact-block {
-    background: var(--surface);
-    padding: 24px;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    margin-top: 24px;
-  }
-  .contact-block h3 {
-    margin-top: 0;
-    color: var(--purple);
-  }
-  footer {
-    padding: 32px 24px;
-    text-align: center;
-    border-top: 1px solid var(--border);
-    color: var(--text-muted);
-    font-size: 13px;
-    margin-top: 60px;
-  }
+  .contact-block { background: var(--surface); padding: 24px; border-radius: 12px; border: 1px solid var(--border); margin-top: 24px; }
+  .contact-block h3 { margin-top: 0; color: var(--purple); }
+  .app-list { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin: 20px 0; }
+  .app-list h3 { margin-top: 0; }
+  .app-list ul li { margin-bottom: 10px; }
+  .app-list ul li a { font-weight: 600; }
+  footer { padding: 32px 24px; text-align: center; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; margin-top: 60px; }
 </style>
 </head>
 <body>
@@ -147,99 +78,81 @@
   </div>
 
   <h2>Overview</h2>
-  <p>Slafiy ("we", "our", or "us") operates mobile applications and digital services (the "Apps"). This Privacy Policy explains what information we collect, how we use it, and the choices you have.</p>
+  <p>Slafiy ("we", "our", or "us") is a studio that develops and operates mobile games and utility apps. This Privacy Policy describes the general principles that apply across all our products.</p>
 
   <div class="highlight">
-    <strong>Summary:</strong> We collect only what is needed for our multiplayer features (authentication, game state, chat). We do not sell your data, show ads, or use tracking for advertising.
+    <strong>Important:</strong> Each of our apps may collect different types of information depending on its features. For app-specific privacy details, see the dedicated privacy page for each product linked below.
   </div>
 
-  <h2>Information We Collect</h2>
-  
-  <h3>1. Account Information (optional, for online features)</h3>
-  <p>If you choose to use online multiplayer features in our games, you sign in with Google Sign-In. When you do, we receive:</p>
-  <ul>
-    <li>Email address (used to create a unique account)</li>
-    <li>Google account display name (used only during authentication; replaced by your chosen nickname inside the game)</li>
-    <li>Google user ID (internal identifier)</li>
-  </ul>
-  <p>You can play all single-player (AI) modes <strong>without signing in or providing any personal information</strong>.</p>
+  <div class="app-list">
+    <h3>App-Specific Privacy Policies</h3>
+    <ul>
+      <li><a href="/apps/sosgame/privacy">SOS Game by Slafiy</a> — classic SOS board game with online multiplayer</li>
+    </ul>
+    <p style="color: var(--text-muted); font-size: 13px; margin-top: 12px;">Additional apps will be listed here as they launch.</p>
+  </div>
 
-  <h3>2. Gameplay Data</h3>
-  <p>For online multiplayer, we store:</p>
+  <h2>Our Privacy Principles</h2>
+  <p>Across all Slafiy apps, we commit to the following principles:</p>
   <ul>
-    <li>Your chosen nickname (not your real name)</li>
-    <li>Game state (board position, moves, scores) during active matches</li>
-    <li>Chat messages you send during a match</li>
-    <li>Match timestamps</li>
-  </ul>
-  <p>This data is stored on Google Firebase Realtime Database and is necessary for real-time multiplayer to function. Match data is deleted when the match is deleted by the user.</p>
-
-  <h3>3. Purchase Data</h3>
-  <p>In-app purchases (such as premium board unlocks) are processed entirely by Google Play Billing or Apple App Store. We receive only a confirmation that a purchase was made — we do not access or store payment card details.</p>
-
-  <h2>Information We Do Not Collect</h2>
-  <ul>
-    <li>Location data</li>
-    <li>Contacts, photos (except when you explicitly save a screenshot), microphone, or camera</li>
-    <li>Advertising identifiers (IDFA, AAID) — we do not show ads</li>
-    <li>Third-party analytics for advertising</li>
-    <li>Browsing history outside the app</li>
+    <li><strong>Minimal collection.</strong> We collect only the data that is necessary for an app's functionality.</li>
+    <li><strong>No advertising.</strong> We do not show ads and do not use advertising identifiers (IDFA, AAID).</li>
+    <li><strong>No data sale.</strong> We never sell personal information to third parties.</li>
+    <li><strong>Transparency.</strong> Every app has a dedicated privacy page explaining exactly what it collects.</li>
+    <li><strong>User control.</strong> You can request access, correction, or deletion of your data at any time.</li>
   </ul>
 
-  <h2>How We Use Your Information</h2>
+  <h2>Common Third-Party Services</h2>
+  <p>Most of our apps use some of the following infrastructure services. The specific services used by each app are detailed on the app's dedicated privacy page:</p>
   <ul>
-    <li>To authenticate you and keep your account secure (Google Sign-In)</li>
-    <li>To enable real-time multiplayer matches between you and other players</li>
-    <li>To deliver in-game chat messages to your opponent</li>
-    <li>To process in-app purchases (via Google/Apple)</li>
-    <li>To respond to support requests you send us</li>
-  </ul>
-
-  <h2>Third-Party Services</h2>
-  <p>We use the following third-party services:</p>
-  <ul>
-    <li><strong>Google Firebase</strong> (Authentication, Realtime Database) — hosts your online match data. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a></li>
+    <li><strong>Google Firebase</strong> (Authentication, Realtime Database, Cloud Messaging) — <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a></li>
     <li><strong>Google Play Services</strong> — for Google Sign-In and Play Billing on Android</li>
-    <li><strong>Apple Sign-In & App Store</strong> — for authentication and billing on iOS (if you use Apple ID)</li>
+    <li><strong>Apple Sign-In &amp; App Store</strong> — for authentication and billing on iOS</li>
   </ul>
-  <p>Our apps also let you share results via WhatsApp, Telegram, X, or Instagram. This sharing is optional and initiated by you; content is then handled by those platforms under their own policies.</p>
 
-  <h2>Chat Messages</h2>
-  <p>Chat messages sent during an online match are stored temporarily on our servers so that both players can see them. You are responsible for the content you send. We do not actively moderate chat content but reserve the right to remove messages or accounts that violate our terms (harassment, hate speech, spam). You can report abusive behavior by emailing support.</p>
-
-  <h2>Data Retention</h2>
+  <h2>Information We Never Collect</h2>
+  <p>Across all our apps, we do not collect:</p>
   <ul>
-    <li>Active match data is kept while the match is ongoing.</li>
-    <li>Finished matches remain in your account history until you delete them.</li>
-    <li>Chat messages are deleted when the associated match is deleted.</li>
-    <li>Account data is retained while your account is active. You can request account deletion at any time (see Contact).</li>
+    <li>Advertising identifiers (IDFA on iOS, AAID on Android)</li>
+    <li>Browsing history outside our apps</li>
+    <li>Data used for cross-app advertising or profiling</li>
+    <li>Biometric data (face, fingerprints)</li>
   </ul>
+
+  <h2>In-App Purchases</h2>
+  <p>Some of our apps offer optional in-app purchases. All payment transactions are processed entirely by:</p>
+  <ul>
+    <li>Google Play Billing (Android)</li>
+    <li>Apple App Store (iOS)</li>
+  </ul>
+  <p>Slafiy does not receive, process, or store payment card details or financial information. Purchase records are managed by Google and Apple under their respective privacy policies.</p>
+
+  <h2>Children's Privacy</h2>
+  <p>We do not knowingly collect personal information from children under the age of 13 (or the applicable age of consent in your region) across any of our apps. If you believe a child has provided us with personal data, please contact us and we will promptly delete it.</p>
 
   <h2>Your Rights</h2>
-  <p>You have the right to:</p>
+  <p>Regardless of which Slafiy app you use, you have the right to:</p>
   <ul>
     <li>Access the personal data we hold about you</li>
-    <li>Request correction or deletion of your account and associated data</li>
+    <li>Request correction of inaccurate data</li>
+    <li>Request deletion of your account and data</li>
     <li>Withdraw consent by signing out and uninstalling the app</li>
     <li>File a complaint with your local data protection authority</li>
   </ul>
-  <p>To exercise any of these rights, email us at <a href="mailto:support@slafiy.com">support@slafiy.com</a>.</p>
-
-  <h2>Children's Privacy</h2>
-  <p>Our games are suitable for a general audience but may include optional chat features. We do not knowingly collect personal information from children under 13 (or the applicable age of consent in your region). If a parent or guardian believes their child has provided us with personal data, please contact us and we will promptly delete it.</p>
+  <p>To exercise any of these rights, email us at <a href="mailto:support@slafiy.com">support@slafiy.com</a> and mention which app your request relates to.</p>
 
   <h2>Data Security</h2>
-  <p>We use Google Firebase, an industry-standard infrastructure that encrypts data in transit (TLS) and at rest. However, no system is 100% secure, and we encourage you to use a strong Google/Apple account password and enable two-factor authentication.</p>
+  <p>We use industry-standard infrastructure (Google Firebase) that encrypts data in transit (TLS) and at rest. No system is 100% secure, and we encourage you to use strong account passwords and enable two-factor authentication.</p>
 
   <h2>International Data Transfer</h2>
   <p>Slafiy is based in Turkey. Our data infrastructure (Firebase) is operated by Google and may store data in data centers located in the European Union or the United States. By using our Apps, you consent to this transfer.</p>
 
   <h2>Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated "Last updated" date. For significant changes, we will provide notice within the app. Continued use of our Apps after changes constitutes acceptance of the updated policy.</p>
+  <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated "Last updated" date. For significant changes, we will also update app-specific privacy pages and may notify users within the app.</p>
 
   <div class="contact-block">
     <h3>Contact Us</h3>
-    <p>If you have any questions or concerns about this Privacy Policy:</p>
+    <p>If you have any questions about this Privacy Policy:</p>
     <p>
       Email: <a href="mailto:support@slafiy.com">support@slafiy.com</a><br>
       Website: <a href="https://slafiy.com">slafiy.com</a><br>
@@ -249,7 +162,7 @@
 </main>
 
 <footer>
-  © 2026 Slafiy. All rights reserved.
+  © 2026 Slafiy. All rights reserved. &middot; <a href="/privacy">Privacy</a> &middot; <a href="/support">Support</a>
 </footer>
 
 </body>
