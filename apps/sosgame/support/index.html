@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOS Game — Support — Slafiy</title>
+<style>
+  :root {
+    --bg: #0F0F1A;
+    --surface: #1A1A2E;
+    --border: #2A2A4E;
+    --text: #E5E7EB;
+    --text-muted: #9CA3AF;
+    --purple: #A78BFA;
+    --purple-dark: #2D1A4E;
+    --teal: #38BDF8;
+    --teal-dark: #0C2D40;
+    --green: #4ADE80;
+    --link: #C084FC;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+  nav {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--surface);
+  }
+  nav .logo { font-weight: 700; letter-spacing: 2px; color: var(--text); font-size: 14px; }
+  nav a { color: var(--text-muted); text-decoration: none; margin-left: 24px; font-size: 14px; }
+  nav a:hover { color: var(--purple); }
+  main { max-width: 880px; margin: 0 auto; padding: 48px 24px 80px; }
+  .breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 8px; letter-spacing: 1px; text-transform: uppercase; }
+  .breadcrumb a { color: var(--text-muted); }
+  .breadcrumb a:hover { color: var(--purple); }
+  .app-badge { display: inline-flex; align-items: center; gap: 10px; background: var(--purple-dark); padding: 6px 14px; border-radius: 30px; border: 1px solid var(--purple); color: var(--purple); font-size: 13px; font-weight: 600; margin-bottom: 12px; }
+  h1 { font-size: 36px; font-weight: 700; margin-bottom: 12px; color: var(--text); }
+  .subtitle { color: var(--text-muted); font-size: 16px; margin-bottom: 36px; }
+  h2 { font-size: 22px; font-weight: 600; margin-top: 40px; margin-bottom: 16px; color: var(--purple); }
+  h3 { font-size: 17px; font-weight: 600; margin-top: 20px; margin-bottom: 8px; color: var(--text); }
+  p { margin-bottom: 14px; color: var(--text); }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin: 20px 0 40px; }
+  .contact-card { background: var(--surface); padding: 20px; border-radius: 12px; border: 1px solid var(--border); }
+  .contact-card .icon { font-size: 22px; margin-bottom: 8px; display: block; }
+  .contact-card .label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+  .contact-card .value { font-size: 15px; font-weight: 600; color: var(--text); }
+  .contact-card .value a { color: var(--text); }
+
+  .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; padding: 16px 20px; }
+  .faq-item .q { font-weight: 600; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+  .faq-item .q::after { content: "+"; color: var(--purple); font-size: 20px; margin-left: 12px; }
+  .faq-item.open .q::after { content: "−"; }
+  .faq-item .a { display: none; margin-top: 12px; color: var(--text); line-height: 1.7; }
+  .faq-item.open .a { display: block; }
+  .faq-item .a ul { margin-left: 18px; margin-top: 8px; }
+  .faq-item .a li { margin-bottom: 6px; }
+
+  .response-note { background: var(--purple-dark); border-left: 3px solid var(--purple); padding: 14px 18px; border-radius: 8px; margin: 20px 0; }
+  .response-note strong { color: var(--purple); }
+
+  footer { padding: 32px 24px; text-align: center; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; margin-top: 60px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">SLAFIY</div>
+  <div>
+    <a href="/">Home</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/support">Support</a>
+  </div>
+</nav>
+
+<main>
+  <div class="breadcrumb">
+    <a href="/support">Support</a> &rsaquo; SOS Game
+  </div>
+  <div class="app-badge">🎮 SOS Game</div>
+  <h1>SOS Game Support</h1>
+  <p class="subtitle">Found a bug, have a question, or want to suggest a feature for SOS Game? You're in the right place.</p>
+
+  <h2>Contact</h2>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <span class="icon">📧</span>
+      <div class="label">Support Email</div>
+      <div class="value"><a href="mailto:support@slafiy.com">support@slafiy.com</a></div>
+    </div>
+    <div class="contact-card">
+      <span class="icon">🔒</span>
+      <div class="label">Privacy Policy</div>
+      <div class="value"><a href="/apps/sosgame/privacy">SOS Game Privacy</a></div>
+    </div>
+    <div class="contact-card">
+      <span class="icon">🌐</span>
+      <div class="label">Studio</div>
+      <div class="value"><a href="https://slafiy.com">slafiy.com</a></div>
+    </div>
+  </div>
+
+  <div class="response-note">
+    <strong>Response time:</strong> We aim to reply within 48 hours. Please include your device model, OS version, and app version.
+  </div>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <h3 style="color: var(--purple); margin-top: 24px;">Gameplay</h3>
+
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="q">How do I play online with a friend?</div>
+    <div class="a">
+      Open SOS Game, tap <strong>Online Mode</strong>, sign in with Google, then tap the <strong>New Game</strong> button and choose <strong>Private Room (Invite Link)</strong>. Share the invite link with your friend — they'll be taken directly into the game when they tap it.
+    </div>
+  </div>
+
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="q">What are Public Rooms?</div>
+    <div class="a">
+      Public Rooms let you create a game anyone can join, or join a room someone else has opened. It's the fastest way to find an opponent when your friends aren't online. You can have one open public room at a time, and up to 5 active games total.
+    </div>
+  </div>
+
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="q">Can I change my nickname?</div>
+    <div class="a">
+      Yes. On the home screen, tap the nickname card (with the pencil icon) to edit it. Your nickname is what opponents see in online matches — your real Google account name is never shared with other players.
+    </div>
+  </div>
+
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="q">My opponent isn't responding</div>
+    <div class="a">
+      SOS Game supports asynchronous play — your opponent can take their turn whenever they want, even hours or days later. If a match stays inactive too long, you can delete it from the <strong>My Games</strong> list by tapping the three-dot menu on the right.
+    </div>
+  </div>
+
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="q">How does the SOS game work?</div>
+    <div class="a">
+      Players take turns placing either "S" or "O" letters on the board. Whenever three letters in a row form "S-O-S" (horizontally, vertically, or diagonally), the player who placed the final letter scores one point and gets another turn immediately. The game ends when the board is full. The player with the most points wins.
+    </div>
+  </div>
+
+  <h3 style="color: var(--purple); margin-top: 24px;">Purchases</h3>
+
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="q">What does the premium purchase unlock?</div>
+    <div class="a">
+      The "Premium Board Pack" ($0.99 one-time purchase) unlocks the 8×8 and 16×16 board sizes in both AI and online modes. Free board sizes (5×5 and 6×6) remain available to everyone.
+    </div>
+  </div>
+
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="q">My purchase didn't go through</div>
+    <div class="a">
+      Purchase issues are usually resolved by Google or Apple directly:
+      <ul>
+        <li><strong>Android:</strong> Open Play Store → Profile → Payments &amp; subscriptions → Budget &amp; history</li>
+        <li><strong>iOS:</strong> Settings → Apple ID → Subscriptions, or <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a></li>
+      </ul>
+      If the purchase is confirmed on Google/Apple but the feature isn't unlocked in the app, try the <strong>Restore Purchases</strong> button. If that doesn't work, email us with your order ID.
+    </div>
+  </div>
+
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="q">I can't play an 8×8 or 16×16 room I was invited to</div>
+    <div class="a">
+      Only the person creating the room needs to have the Premium Board Pack. If you're joining a premium room via invite link, you can play without purchasing.
+    </div>
+  </div>
+
+  <h3 style="color: var(--purple); margin-top: 24px;">Account &amp; Data</h3>
+
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="q">Someone sent an abusive chat message</div>
+    <div class="a">
+      We take this seriously. Please email us at <a href="mailto:support@slafiy.com">support@slafiy.com</a> with:
+      <ul>
+        <li>Your nickname</li>
+        <li>The opponent's nickname</li>
+        <li>A screenshot of the offending message</li>
+        <li>Approximate time the message was sent</li>
+      </ul>
+      We'll investigate and may remove messages, ban accounts, or both.
+    </div>
+  </div>
+
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="q">How do I delete my account and data?</div>
+    <div class="a">
+      Send an email to <a href="mailto:support@slafiy.com">support@slafiy.com</a> from the email address associated with your Google account. Include "Delete SOS Game account" in the subject. We'll confirm and permanently remove all your data (account, matches, chat messages) within 30 days.
+    </div>
+  </div>
+
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="q">Is my data safe?</div>
+    <div class="a">
+      Yes. We use Google Firebase which encrypts data in transit and at rest. We don't sell your data or show you ads. See our <a href="/apps/sosgame/privacy">SOS Game Privacy Policy</a> for full details on what we collect and how we use it.
+    </div>
+  </div>
+
+  <h3 style="color: var(--purple); margin-top: 24px;">Technical Issues</h3>
+
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="q">The app crashed or I found a bug</div>
+    <div class="a">
+      Sorry about that. Email <a href="mailto:support@slafiy.com">support@slafiy.com</a> with:
+      <ul>
+        <li>Device model (e.g., Samsung Galaxy A26, iPhone 14)</li>
+        <li>OS version (e.g., Android 14, iOS 17)</li>
+        <li>App version (shown at the bottom of the home screen)</li>
+        <li>Steps to reproduce the bug</li>
+      </ul>
+      Screenshots or screen recordings help a lot. We fix reported issues in priority order.
+    </div>
+  </div>
+
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="q">The game disconnected during an online match</div>
+    <div class="a">
+      Match state is automatically saved to the cloud. Reopen the app and your match will resume from where it left off. If it doesn't, check your internet connection. Firebase requires internet connectivity for online mode.
+    </div>
+  </div>
+
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="q">Can I play offline?</div>
+    <div class="a">
+      Yes! AI mode (single player against the computer) works entirely offline. Only online mode requires an internet connection.
+    </div>
+  </div>
+
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="q">How can I request a feature?</div>
+    <div class="a">
+      Email <a href="mailto:support@slafiy.com">support@slafiy.com</a> with "Feature Request — SOS Game" in the subject. We read every suggestion and prioritize the most-requested ones for future updates.
+    </div>
+  </div>
+
+  <h2>Still Need Help?</h2>
+  <p>If your question isn't answered above, send us an email. We read every message.</p>
+  <p>📧 <a href="mailto:support@slafiy.com">support@slafiy.com</a></p>
+
+</main>
+
+<footer>
+  © 2026 Slafiy. All rights reserved. &middot; <a href="/apps/sosgame/privacy">SOS Privacy</a> &middot; <a href="/support">General Support</a>
+</footer>
+
+</body>
+</html>
