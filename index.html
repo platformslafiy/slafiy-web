@@ -67,7 +67,7 @@ tailwind.config={theme:{extend:{colors:{bg:'#0a0a0f',surface:'#14141f',accent:'#
      </div><!-- Stats -->
      <div class="mt-16 grid grid-cols-3 gap-4 sm:gap-8">
       <div class="feature-card glass rounded-xl p-4 sm:p-6 text-center">
-       <p class="text-2xl sm:text-3xl font-extrabold gradient-text mb-1">8+</p>
+       <p class="text-2xl sm:text-3xl font-extrabold gradient-text mb-1">5+</p>
        <p class="text-xs sm:text-sm opacity-50" data-i18n="stat_apps">Apps</p>
       </div>
       <div class="feature-card glass rounded-xl p-4 sm:p-6 text-center">
@@ -114,7 +114,7 @@ tailwind.config={theme:{extend:{colors:{bg:'#0a0a0f',surface:'#14141f',accent:'#
     <div class="max-w-7xl mx-auto">
      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-3" data-i18n="apps_title">Our Apps</h2>
      <p class="text-center opacity-50 mb-12 text-sm" data-i18n="apps_subtitle">Download now from your favorite store</p><!-- Filter Tabs -->
-     <div class="flex justify-center gap-2 mb-12 flex-wrap" id="filter-tabs"><button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-accent text-white" data-filter="all" data-i18n="filter_all">All</button> <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white/5 hover:bg-white/10 transition" data-filter="game" data-i18n="filter_games">Games</button> <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white/5 hover:bg-white/10 transition" data-filter="dating" data-i18n="filter_dating">Dating</button> <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white/5 hover:bg-white/10 transition" data-filter="utility" data-i18n="filter_utility">Utility</button>
+     <div class="flex justify-center gap-2 mb-12 flex-wrap" id="filter-tabs"><button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-accent text-white" data-filter="all" data-i18n="filter_all">All</button> <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white/5 hover:bg-white/10 transition" data-filter="game" data-i18n="filter_games">Games</button> <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white/5 hover:bg-white/10 transition" data-filter="dating" data-i18n="filter_dating">Dating</button>
      </div>
      <div id="app-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"></div>
     </div>
@@ -172,19 +172,16 @@ const i18n = {
     whyus_safe_title:'%100 Güvenli',whyus_safe_desc:'Tüm uygulamalar doğrulandı ve test edildi. Verileriniz güvende.',
     whyus_love_title:'Milyonlar Tarafından Sevilir',whyus_love_desc:'500K+ kullanıcıya katıl ve her gün harika oyunları oyna.',
     apps_title:'Uygulamalarımız',apps_subtitle:'Favori mağazandan hemen indir',
-    filter_all:'Tümü',filter_games:'Oyunlar',filter_dating:'Tanışma',filter_utility:'Araçlar',
+    filter_all:'Tümü',filter_games:'Oyunlar',filter_dating:'Tanışma',
     contact_title:'İletişim',contact_name:'İsim',contact_email_label:'E-posta',contact_message:'Mesaj',contact_send:'Mesaj Gönder',contact_success:'Mesajınız başarıyla gönderildi!',
     contact_question:'Sorularınız mı var? Size yardımcı olmaktan memnuniyet duyarız.',contact_direct:'Veya doğrudan bize ulaşın:',
     footer_rights:'Tüm hakları saklıdır.',
     coming_soon:'Çok Yakında',
     apple_store:'Apple Store',play_store:'Play Store',how_to_play:'Nasıl oynanır?',
-    timeTeller_desc:'Verilen karardan sonra geçen süreyi göster',timeTeller_how:'Karar tarihi gir, sistem otomatik olarak geçen süreyi hesapla',
     sos_desc:'Çoklu oynanabilir acil durum oyunu',sos_how:'Ekranda görünen acil durum senaryolarını hızlı çöz',
-    rps_desc:'Klasik oyunun modern hali',rps_how:'Taş, kağıt veya makas seç, yapay zeka ile oyna',
     fly_desc:'Chopstick ile sinek avla',fly_how:'Ekrandaki sinekleri çubuklar arası kısıl, puan topla',
     chick_desc:'Yumurtaları sepetle tut',chick_how:'Düşen yumurtaları sepetle yakala, combo yaparak puan artır',
     rooster_desc:'Tavukları kovalayan horoz',rooster_how:'Hızlı tavuğu kontrol et, diğer tavukları kovalayıp yakala',
-    avatar_desc:'Avatarını yükle ve koş',avatar_how:'Profilin fotoğrafını yükle, karakterin olarak engelleri aş',
     vibe_desc:'AI eşleştirmesi ile partnerini bul',vibe_how:'Profilin oluştur, yapay zeka seni en uygun seçkin ile tanıştır',
   },
   en: {
@@ -199,19 +196,16 @@ const i18n = {
     whyus_safe_title:'100% Safe',whyus_safe_desc:'All apps are verified and tested. Your data and privacy are protected.',
     whyus_love_title:'Loved by Millions',whyus_love_desc:'Join 500K+ users enjoying premium games and apps daily.',
     apps_title:'Our Apps',apps_subtitle:'Download now from your favorite store',
-    filter_all:'All',filter_games:'Games',filter_dating:'Dating',filter_utility:'Utility',
+    filter_all:'All',filter_games:'Games',filter_dating:'Dating',
     contact_title:'Contact',contact_name:'Name',contact_email_label:'Email',contact_message:'Message',contact_send:'Send Message',contact_success:'Message sent successfully!',
     contact_question:'Have questions? We\'d love to hear from you.',contact_direct:'Or reach us directly:',
     footer_rights:'All rights reserved.',
     coming_soon:'Coming Soon',
     apple_store:'Apple Store',play_store:'Play Store',how_to_play:'How to play?',
-    timeTeller_desc:'Track time since your decision',timeTeller_how:'Enter decision date, system calculates elapsed time automatically',
     sos_desc:'Multiplayer emergency challenge',sos_how:'Solve emergency scenarios appearing on screen quickly',
-    rps_desc:'Modern twist on a classic',rps_how:'Choose rock, paper, or scissors, play against AI',
     fly_desc:'Hunt flies with chopsticks',fly_how:'Trap flies between chopsticks on screen, collect points',
     chick_desc:'Catch falling eggs',chick_how:'Catch falling eggs with basket, increase points with combos',
     rooster_desc:'Rooster chasing chickens',rooster_how:'Control the fast rooster, chase and catch other chickens',
-    avatar_desc:'Upload your avatar and run',avatar_how:'Upload your photo, run as your character avoiding obstacles',
     vibe_desc:'Find your perfect partner with AI',vibe_how:'Create your profile, AI introduces you to ideal matches',
   }
 };
@@ -235,13 +229,10 @@ function applyLang(lang) {
 
 // === App Data ===
 const apps = [
-  {name:'TimeTeller',emoji:'⏱️',cat:'utility',gradient:'from-blue-500 to-cyan-600',rating:'4.9',downloads:'180K',desc_key:'timeTeller_desc',how_key:'timeTeller_how',apple:'#',google:'#'},
   {name:'SOS Game',emoji:'🆘',cat:'game',gradient:'from-red-500 to-orange-600',rating:'4.7',downloads:'150K',desc_key:'sos_desc',how_key:'sos_how',apple:'#',google:'#'},
-  {name:'Rock Paper Scissors',emoji:'✊',cat:'game',gradient:'from-purple-500 to-pink-600',rating:'4.8',downloads:'220K',desc_key:'rps_desc',how_key:'rps_how',apple:'#',google:'#'},
   {name:'Fly Catcher',emoji:'🪰',cat:'game',gradient:'from-amber-500 to-yellow-600',rating:'4.6',downloads:'95K',desc_key:'fly_desc',how_key:'fly_how',apple:'#',google:'#'},
   {name:'Chick Chick',emoji:'🥚',cat:'game',gradient:'from-yellow-400 to-orange-500',rating:'4.5',downloads:'130K',desc_key:'chick_desc',how_key:'chick_how',apple:'#',google:'#'},
   {name:'Rooster Chase',emoji:'🐓',cat:'game',gradient:'from-red-600 to-rose-700',rating:'4.4',downloads:'78K',desc_key:'rooster_desc',how_key:'rooster_how',apple:'#',google:'#'},
-  {name:'Avatar Runner',emoji:'🏃',cat:'game',gradient:'from-gradient-500 to-purple-600',rating:'4.7',downloads:'165K',desc_key:'avatar_desc',how_key:'avatar_how',apple:'#',google:'#'},
   {name:'Vibe',emoji:'V',cat:'dating',gradient:'from-slate-900 to-slate-700',rating:'4.8',downloads:'380K',desc_key:'vibe_desc',how_key:'vibe_how',apple:'#',google:'#'},
 ];
 
@@ -263,7 +254,7 @@ function renderApps(filter) {
     card.style.animationDelay = (i * 0.05) + 's';
     
     card.innerHTML = `
-      <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br ${app.gradient} flex items-center justify-center text-3xl sm:text-4xl mb-3 shadow-lg" style="${app.name === 'Vibe' ? 'font-size: 3rem; letter-spacing: -2px;' : ''}${app.name === 'Avatar Runner' ? 'background: linear-gradient(135deg, #8b5cf6 20%, #9333ea 60%);' : ''}">${app.emoji}</div>
+      <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br ${app.gradient} flex items-center justify-center text-3xl sm:text-4xl mb-3 shadow-lg" style="${app.name === 'Vibe' ? 'font-size: 3rem; letter-spacing: -2px;' : ''}">${app.emoji}</div>
       <h3 class="font-bold text-sm sm:text-base mb-1">${app.name}</h3>
       <div class="inline-block bg-accent/20 text-accent text-[8px] font-bold px-2 py-1 rounded-full mb-2" data-i18n="coming_soon">Coming Soon</div>
       <p class="text-[10px] sm:text-xs opacity-50 mb-2 leading-tight">${desc}</p>
