@@ -124,14 +124,19 @@ tailwind.config={theme:{extend:{colors:{bg:'#0a0a0f',surface:'#14141f',accent:'#
      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-3" data-i18n="contact_title">Get In Touch</h2>
      <p class="text-center opacity-50 mb-10 text-sm" data-i18n="contact_question">Have questions? We'd love to hear from you.</p>
      <div class="glass rounded-2xl p-8 glow">
-      <form id="contact-form" class="flex flex-col gap-5">
-       <div><label for="cf-name" class="text-xs opacity-50 mb-2 block font-semibold" data-i18n="contact_name">Name</label> <input id="cf-name" type="text" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-accent focus:bg-white/10 transition">
+      <form id="contact-form" class="flex flex-col gap-5" action="https://api.web3forms.com/submit" method="POST">
+       <input type="hidden" name="access_key" value="5453a570-83cc-4cd6-85a7-4717a11ca2fc">
+       <input type="hidden" name="subject" value="New contact message — slafiy.com">
+       <input type="hidden" name="from_name" value="Slafiy Website">
+       <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
+       <div><label for="cf-name" class="text-xs opacity-50 mb-2 block font-semibold" data-i18n="contact_name">Name</label> <input id="cf-name" name="name" type="text" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-accent focus:bg-white/10 transition">
        </div>
-       <div><label for="cf-email" class="text-xs opacity-50 mb-2 block font-semibold" data-i18n="contact_email_label">Email</label> <input id="cf-email" type="email" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-accent focus:bg-white/10 transition">
+       <div><label for="cf-email" class="text-xs opacity-50 mb-2 block font-semibold" data-i18n="contact_email_label">Email</label> <input id="cf-email" name="email" type="email" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-accent focus:bg-white/10 transition">
        </div>
-       <div><label for="cf-msg" class="text-xs opacity-50 mb-2 block font-semibold" data-i18n="contact_message">Message</label> <textarea id="cf-msg" rows="4" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-accent focus:bg-white/10 transition resize-none"></textarea>
-       </div><button type="submit" class="bg-gradient-to-r from-accent to-accent2 text-white font-semibold py-3 rounded-lg text-sm hover:shadow-lg hover:shadow-accent/50 transition-all transform hover:scale-105" data-i18n="contact_send">Send Message</button>
+       <div><label for="cf-msg" class="text-xs opacity-50 mb-2 block font-semibold" data-i18n="contact_message">Message</label> <textarea id="cf-msg" name="message" rows="4" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-accent focus:bg-white/10 transition resize-none"></textarea>
+       </div><button type="submit" id="contact-submit" class="bg-gradient-to-r from-accent to-accent2 text-white font-semibold py-3 rounded-lg text-sm hover:shadow-lg hover:shadow-accent/50 transition-all transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none" data-i18n="contact_send">Send Message</button>
        <p id="contact-success" class="hidden text-center text-accent2 text-sm mt-2" data-i18n="contact_success">Message sent successfully!</p>
+       <p id="contact-error" class="hidden text-center text-red-400 text-sm mt-2" data-i18n="contact_error">Something went wrong. Please try again.</p>
       </form>
       <div class="mt-6 pt-6 border-t border-white/5 text-center">
        <p class="text-xs opacity-50 mb-3" data-i18n="contact_direct">Or reach us directly:</p>
@@ -173,7 +178,7 @@ const i18n = {
     whyus_love_title:'Dünya İçin Tasarlandı',whyus_love_desc:'Apple App Store ve Google Play\'de küresel yayın — her yerdeki oyuncular için özenle hazırlandı.',
     apps_title:'Uygulamalarımız',apps_subtitle:'Favori mağazandan hemen indir',
     filter_all:'Tümü',filter_games:'Oyunlar',filter_dating:'Tanışma',
-    contact_title:'İletişim',contact_name:'İsim',contact_email_label:'E-posta',contact_message:'Mesaj',contact_send:'Mesaj Gönder',contact_success:'Mesajınız başarıyla gönderildi!',
+    contact_title:'İletişim',contact_name:'İsim',contact_email_label:'E-posta',contact_message:'Mesaj',contact_send:'Mesaj Gönder',contact_sending:'Gönderiliyor...',contact_success:'Mesajınız başarıyla gönderildi!',contact_error:'Bir hata oluştu. Lütfen tekrar deneyin.',
     contact_question:'Sorularınız mı var? Size yardımcı olmaktan memnuniyet duyarız.',contact_direct:'Veya doğrudan bize ulaşın:',
     footer_rights:'Tüm hakları saklıdır.',
     coming_soon:'Çok Yakında',
@@ -197,7 +202,7 @@ const i18n = {
     whyus_love_title:'Built for the World',whyus_love_desc:'Launching globally on Apple App Store and Google Play — crafted with care for players everywhere.',
     apps_title:'Our Apps',apps_subtitle:'Download now from your favorite store',
     filter_all:'All',filter_games:'Games',filter_dating:'Dating',
-    contact_title:'Contact',contact_name:'Name',contact_email_label:'Email',contact_message:'Message',contact_send:'Send Message',contact_success:'Message sent successfully!',
+    contact_title:'Contact',contact_name:'Name',contact_email_label:'Email',contact_message:'Message',contact_send:'Send Message',contact_sending:'Sending...',contact_success:'Message sent successfully!',contact_error:'Something went wrong. Please try again.',
     contact_question:'Have questions? We\'d love to hear from you.',contact_direct:'Or reach us directly:',
     footer_rights:'All rights reserved.',
     coming_soon:'Coming Soon',
@@ -309,12 +314,38 @@ document.getElementById('mobile-menu').addEventListener('click', e => {
   if (e.target.tagName === 'A') document.getElementById('mobile-menu').classList.add('hidden');
 });
 
-// === Contact Form ===
-document.getElementById('contact-form').addEventListener('submit', e => {
+// === Contact Form (Web3Forms) ===
+document.getElementById('contact-form').addEventListener('submit', async e => {
   e.preventDefault();
-  document.getElementById('contact-success').classList.remove('hidden');
-  e.target.reset();
-  setTimeout(() => document.getElementById('contact-success').classList.add('hidden'), 3000);
+  const form = e.target;
+  const btn = document.getElementById('contact-submit');
+  const success = document.getElementById('contact-success');
+  const error = document.getElementById('contact-error');
+  success.classList.add('hidden');
+  error.classList.add('hidden');
+  const originalLabel = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = i18n[currentLang].contact_sending;
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: new FormData(form),
+    });
+    const data = await res.json();
+    if (data.success) {
+      success.classList.remove('hidden');
+      form.reset();
+      setTimeout(() => success.classList.add('hidden'), 5000);
+    } else {
+      error.classList.remove('hidden');
+    }
+  } catch {
+    error.classList.remove('hidden');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = originalLabel;
+  }
 });
 
 // === Stars ===
