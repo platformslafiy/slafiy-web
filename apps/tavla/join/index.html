@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0F0F1A">
+  <title>Tavla — Odaya Katıl</title>
+  <meta name="description" content="Slafiy Tavla / Backgammon Classic — arkadaşının paylaştığı oyun odasına katıl.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tavla — Odaya Katıl">
+  <meta property="og:description" content="Arkadaşının paylaştığı oyun odasına katılmak için Tavla uygulamasını aç veya yükle.">
+  <meta property="og:image" content="https://slafiy.com/apps/tavla/og.png">
+  <meta property="og:type" content="website">
+
+  <!-- App Links — uygulama kuruluysa native deep link ile açar -->
+  <meta name="al:android:package" content="com.slafiy.tavla">
+  <meta name="al:android:url" content="tavla://join/">
+  <meta name="al:android:app_name" content="Tavla">
+  <meta name="al:ios:url" content="tavla://join/">
+  <meta name="al:ios:app_store_id" content="">
+  <meta name="al:ios:app_name" content="Tavla">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0F0F1A; color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      display: flex; align-items: center; justify-content: center;
+      min-height: 100vh; padding: 24px;
+    }
+    .card {
+      background: #1A1A2E; border: 1px solid #2A2A4A;
+      border-radius: 24px; padding: 40px 32px;
+      text-align: center; max-width: 360px; width: 100%;
+    }
+    .logo { display: flex; gap: 6px; justify-content: center; margin-bottom: 24px; }
+    .logo-tile { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; }
+    .t1 { background: #2D1B4E; color: #C084FC; }
+    .t2 { background: #3A1E0F; color: #FFC857; }
+    .t3 { background: #0F2A3A; color: #22D3EE; }
+    h1 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+    p  { color: #888; font-size: 14px; margin-bottom: 24px; }
+    .code { background: #0F0F1A; border: 1px solid #C084FC44; border-radius: 12px; padding: 16px; font-size: 32px; font-weight: 800; letter-spacing: 8px; color: #C084FC; margin-bottom: 24px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .btn { display: block; background: #7C3AED; color: #fff; text-decoration: none; padding: 16px; border-radius: 16px; font-size: 16px; font-weight: 600; margin-bottom: 12px; cursor: pointer; border: none; width: 100%; }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .store-links { display: flex; gap: 12px; margin-top: 16px; }
+    .store-btn { flex: 1; background: #1A1A2E; border: 1px solid #2A2A4A; border-radius: 12px; padding: 12px; text-align: center; text-decoration: none; color: #888; font-size: 12px; }
+    .hint { color: #555; font-size: 12px; margin-top: 12px; }
+    .footer { margin-top: 24px; color: #555; font-size: 11px; }
+    .footer a { color: #888; text-decoration: none; }
+  </style>
+  <script>
+    var roomCode = '';
+
+    window.onload = function() {
+      var url = new URL(window.location.href);
+      var k = url.searchParams.get('kod') || url.searchParams.get('code') || url.searchParams.get('room');
+      if (k) {
+        roomCode = k.toUpperCase().slice(0, 6);
+      } else {
+        var parts = url.pathname.split('/').filter(Boolean);
+        var last = parts[parts.length - 1] || '';
+        if (/^[A-Z0-9]{6}$/i.test(last)) roomCode = last.toUpperCase();
+      }
+
+      if (roomCode) {
+        document.getElementById('room-code').textContent = roomCode;
+      } else {
+        document.getElementById('room-code').textContent = '------';
+        var btn = document.getElementById('open-btn');
+        btn.disabled = true;
+        btn.textContent = 'Geçersiz Kod';
+      }
+
+      // Platform detection — sadece ilgili mağaza linkini göster
+      var ua = navigator.userAgent || '';
+      var isIOS = /iPhone|iPad|iPod/i.test(ua);
+      var isAndroid = /Android/i.test(ua);
+      if (isIOS) {
+        document.getElementById('store-android').style.display = 'none';
+      } else if (isAndroid) {
+        document.getElementById('store-ios').style.display = 'none';
+      }
+
+      // Otomatik açma denemesi: app kuruluysa intent çalışır
+      if (roomCode && (isIOS || isAndroid)) {
+        setTimeout(function() {
+          window.location.href = 'tavla://join/' + roomCode;
+        }, 600);
+      }
+    };
+
+    function openApp() {
+      if (!roomCode) return;
+      var iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      iframe.src = 'tavla://join/' + roomCode;
+      document.body.appendChild(iframe);
+      setTimeout(function() {
+        document.body.removeChild(iframe);
+      }, 2000);
+    }
+  </script>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">
+      <div class="logo-tile t1">🎲</div>
+      <div class="logo-tile t2">♟</div>
+      <div class="logo-tile t3">🎲</div>
+    </div>
+    <h1>Seni Tavlaya Davet Etti!</h1>
+    <p>Oda kodu ile Tavla uygulamasına katıl</p>
+    <div class="code" id="room-code">------</div>
+    <button class="btn" id="open-btn" onclick="openApp()">📱 Uygulamada Aç</button>
+    <p class="hint">Uygulama açılmadıysa yüklü olmayabilir</p>
+    <div class="store-links">
+      <a class="store-btn" id="store-android" href="https://play.google.com/store/apps/details?id=com.slafiy.tavla">🤖 Google Play</a>
+      <a class="store-btn" id="store-ios" href="#">🍎 App Store</a>
+    </div>
+    <div class="footer">
+      <a href="/apps/tavla/privacy">Gizlilik</a> · <a href="/apps/tavla/terms">Şartlar</a> · <a href="https://slafiy.com">slafiy.com</a>
+    </div>
+  </div>
+</body>
+</html>
