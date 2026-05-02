@@ -221,9 +221,9 @@ function applyLang(lang) {
 
 // === App Data ===
 const apps = [
-  {name:'SOS Game',icon:'/assets/icons/sosgame.png',desc_key:'sos_desc',how_key:'sos_how',apple:'#',google:'#'},
-  {name:'Tavla',icon:'/assets/icons/tavla.png',desc_key:'tavla_desc',how_key:'tavla_how',apple:'#',google:'#'},
-  {name:'Hero Fly',icon:'/assets/icons/herofly.png',desc_key:'herofly_desc',how_key:'herofly_how',apple:'#',google:'#'},
+  {name:'SOS Game',icon:'/assets/icons/sosgame.png',ring:true,desc_key:'sos_desc',how_key:'sos_how',apple:'#',google:'#'},
+  {name:'Tavla',icon:'/assets/icons/tavla.png',ring:false,desc_key:'tavla_desc',how_key:'tavla_how',apple:'#',google:'#'},
+  {name:'Hero Fly',icon:'/assets/icons/herofly.png',ring:false,desc_key:'herofly_desc',how_key:'herofly_how',apple:'#',google:'#'},
 ];
 
 function renderApps() {
@@ -238,7 +238,7 @@ function renderApps() {
     card.style.animationDelay = (i * 0.05) + 's';
 
     card.innerHTML = `
-      <img src="${app.icon}" alt="${app.name} logo" class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl mb-4 shadow-lg object-cover ring-1 ring-white/15" loading="lazy">
+      <img src="${app.icon}" alt="${app.name} logo" class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl mb-4 shadow-lg object-cover${app.ring ? ' ring-1 ring-white/15' : ''}" loading="lazy">
       <h3 class="font-bold text-base sm:text-lg mb-1">${app.name}</h3>
       <div class="inline-block bg-accent/20 text-accent text-[9px] font-bold px-2 py-1 rounded-full mb-3" data-i18n="coming_soon">Coming Soon</div>
       <p class="text-xs sm:text-sm opacity-60 mb-4 leading-snug">${desc}</p>
