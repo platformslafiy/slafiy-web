@@ -67,7 +67,7 @@ tailwind.config={theme:{extend:{colors:{bg:'#0a0a0f',surface:'#14141f',accent:'#
      </div><!-- Stats -->
      <div class="mt-16 grid grid-cols-3 gap-4 sm:gap-8">
       <div class="feature-card glass rounded-xl p-4 sm:p-6 text-center">
-       <p class="text-2xl sm:text-3xl font-extrabold gradient-text mb-1">5+</p>
+       <p class="text-2xl sm:text-3xl font-extrabold gradient-text mb-1">3</p>
        <p class="text-xs sm:text-sm opacity-50" data-i18n="stat_apps">Apps</p>
       </div>
       <div class="feature-card glass rounded-xl p-4 sm:p-6 text-center">
@@ -113,10 +113,8 @@ tailwind.config={theme:{extend:{colors:{bg:'#0a0a0f',surface:'#14141f',accent:'#
    <section id="apps" class="w-full py-20 px-4 sm:px-6 relative z-10">
     <div class="max-w-7xl mx-auto">
      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-3" data-i18n="apps_title">Our Apps</h2>
-     <p class="text-center opacity-50 mb-12 text-sm" data-i18n="apps_subtitle">Download now from your favorite store</p><!-- Filter Tabs -->
-     <div class="flex justify-center gap-2 mb-12 flex-wrap" id="filter-tabs"><button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-accent text-white" data-filter="all" data-i18n="filter_all">All</button> <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white/5 hover:bg-white/10 transition" data-filter="game" data-i18n="filter_games">Games</button> <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white/5 hover:bg-white/10 transition" data-filter="dating" data-i18n="filter_dating">Dating</button>
-     </div>
-     <div id="app-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"></div>
+     <p class="text-center opacity-50 mb-12 text-sm" data-i18n="apps_subtitle">Download now from your favorite store</p>
+     <div id="app-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto"></div>
     </div>
    </section><!-- Contact Section -->
    <section id="contact" class="w-full py-20 px-4 sm:px-6 relative z-10">
@@ -169,56 +167,49 @@ const i18n = {
     nav_home:'Ana Sayfa',nav_apps:'Uygulamalar',nav_about:'Hakkında',nav_contact:'İletişim',
     hero_label:'Slafiy\'e Hoş Geldiniz',
     hero_subtitle:'Hemen indirmeye başla',
-    hero_desc:'Apple ve Play Store\'da yakında yayında olacak oyun, tanışma ve araç uygulamaları.',
+    hero_desc:'Apple ve Play Store\'da yakında yayında olacak özenle tasarlanmış oyunlar.',
     hero_cta1:'Uygulamaları Keşfet',hero_cta2:'Daha Fazla Bilgi',
     stat_apps:'Uygulama',stat_countries:'Ülke',stat_stores:'Mağaza',
-    whyus_title:'Neden Slafiy\'i Seç?',whyus_subtitle:'Özenle tasarlanmış oyunlar ve uygulamalar',
+    whyus_title:'Neden Slafiy\'i Seç?',whyus_subtitle:'Özenle tasarlanmış oyunlar',
     whyus_fast_title:'Yıldırım Hızı',whyus_fast_desc:'Anında indir ve sorunsuz oyunla. Optimize edilmiş performans.',
     whyus_safe_title:'%100 Güvenli',whyus_safe_desc:'Tüm uygulamalar doğrulandı ve test edildi. Verileriniz güvende.',
     whyus_love_title:'Dünya İçin Tasarlandı',whyus_love_desc:'Apple App Store ve Google Play\'de küresel yayın — her yerdeki oyuncular için özenle hazırlandı.',
     apps_title:'Uygulamalarımız',apps_subtitle:'Favori mağazandan hemen indir',
-    filter_all:'Tümü',filter_games:'Oyunlar',filter_dating:'Tanışma',
     contact_title:'İletişim',contact_name:'İsim',contact_email_label:'E-posta',contact_message:'Mesaj',contact_send:'Mesaj Gönder',contact_sending:'Gönderiliyor...',contact_success:'Mesajınız başarıyla gönderildi!',contact_error:'Bir hata oluştu. Lütfen tekrar deneyin.',
     contact_question:'Sorularınız mı var? Size yardımcı olmaktan memnuniyet duyarız.',contact_direct:'Veya doğrudan bize ulaşın:',
     footer_rights:'Tüm hakları saklıdır.',
     coming_soon:'Çok Yakında',
     apple_store:'Apple Store',play_store:'Play Store',how_to_play:'Nasıl oynanır?',
-    sos_desc:'Çoklu oynanabilir acil durum oyunu',sos_how:'Ekranda görünen acil durum senaryolarını hızlı çöz',
-    fly_desc:'Chopstick ile sinek avla',fly_how:'Ekrandaki sinekleri çubuklar arası kısıl, puan topla',
-    chick_desc:'Yumurtaları sepetle tut',chick_how:'Düşen yumurtaları sepetle yakala, combo yaparak puan artır',
-    rooster_desc:'Tavukları kovalayan horoz',rooster_how:'Hızlı tavuğu kontrol et, diğer tavukları kovalayıp yakala',
-    vibe_desc:'AI eşleştirmesi ile partnerini bul',vibe_how:'Profilin oluştur, yapay zeka seni en uygun seçkin ile tanıştır',
+    sos_desc:'Klasik SOS oyununun modern ve çok oyunculu versiyonu',sos_how:'Sırayla S ve O harfleriyle "SOS" oluştur, en çok puanı topla',
+    tavla_desc:'Klasik tavla deneyimi, modern arayüzle',tavla_how:'Zar at, pullarını oyna ve rakibini yenmek için stratejini kur',
+    herofly_desc:'Cesur sinek pilotuyla gökyüzünde maceraya atıl',herofly_how:'Uçağını kontrol et, engellerden kaç ve yüksek skor yap',
   },
   en: {
     nav_home:'Home',nav_apps:'Apps',nav_about:'About',nav_contact:'Contact',
     hero_label:'Welcome to Slafiy',
     hero_subtitle:'Start downloading now',
-    hero_desc:'Premium games, dating & utility apps launching soon on Apple & Play Store.',
+    hero_desc:'Thoughtfully crafted games launching soon on Apple & Play Store.',
     hero_cta1:'Explore Apps',hero_cta2:'Learn More',
     stat_apps:'Apps',stat_countries:'Countries',stat_stores:'App Stores',
-    whyus_title:'Why Choose Slafiy?',whyus_subtitle:'Thoughtfully crafted games and apps',
+    whyus_title:'Why Choose Slafiy?',whyus_subtitle:'Thoughtfully crafted games',
     whyus_fast_title:'Lightning Fast',whyus_fast_desc:'Instant downloads and smooth gameplay with optimized performance.',
     whyus_safe_title:'100% Safe',whyus_safe_desc:'All apps are verified and tested. Your data and privacy are protected.',
     whyus_love_title:'Built for the World',whyus_love_desc:'Launching globally on Apple App Store and Google Play — crafted with care for players everywhere.',
     apps_title:'Our Apps',apps_subtitle:'Download now from your favorite store',
-    filter_all:'All',filter_games:'Games',filter_dating:'Dating',
     contact_title:'Contact',contact_name:'Name',contact_email_label:'Email',contact_message:'Message',contact_send:'Send Message',contact_sending:'Sending...',contact_success:'Message sent successfully!',contact_error:'Something went wrong. Please try again.',
     contact_question:'Have questions? We\'d love to hear from you.',contact_direct:'Or reach us directly:',
     footer_rights:'All rights reserved.',
     coming_soon:'Coming Soon',
     apple_store:'Apple Store',play_store:'Play Store',how_to_play:'How to play?',
-    sos_desc:'Multiplayer emergency challenge',sos_how:'Solve emergency scenarios appearing on screen quickly',
-    fly_desc:'Hunt flies with chopsticks',fly_how:'Trap flies between chopsticks on screen, collect points',
-    chick_desc:'Catch falling eggs',chick_how:'Catch falling eggs with basket, increase points with combos',
-    rooster_desc:'Rooster chasing chickens',rooster_how:'Control the fast rooster, chase and catch other chickens',
-    vibe_desc:'Find your perfect partner with AI',vibe_how:'Create your profile, AI introduces you to ideal matches',
+    sos_desc:'A modern, multiplayer twist on the classic SOS game',sos_how:'Take turns placing S and O letters to form "SOS" and score most points',
+    tavla_desc:'Classic backgammon experience with a modern interface',tavla_how:'Roll the dice, move your checkers and outsmart your opponent',
+    herofly_desc:'Take to the skies with a brave little fly pilot',herofly_how:'Steer your plane, dodge obstacles and chase a high score',
   }
 };
 
 let currentLang = 'en';
 
 function applyLang(lang) {
-  currentLang = lang;
   currentLang = lang;
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
@@ -229,46 +220,38 @@ function applyLang(lang) {
     const key = el.getAttribute('data-desc-key');
     if (key && i18n[lang][key]) el.textContent = i18n[lang][key];
   });
-  renderApps(currentFilter);
+  renderApps();
 }
 
 // === App Data ===
 const apps = [
-  {name:'SOS Game',emoji:'🆘',cat:'game',gradient:'from-red-500 to-orange-600',desc_key:'sos_desc',how_key:'sos_how',apple:'#',google:'#'},
-  {name:'Fly Catcher',emoji:'🪰',cat:'game',gradient:'from-amber-500 to-yellow-600',desc_key:'fly_desc',how_key:'fly_how',apple:'#',google:'#'},
-  {name:'Chick Chick',emoji:'🥚',cat:'game',gradient:'from-yellow-400 to-orange-500',desc_key:'chick_desc',how_key:'chick_how',apple:'#',google:'#'},
-  {name:'Rooster Chase',emoji:'🐓',cat:'game',gradient:'from-red-600 to-rose-700',desc_key:'rooster_desc',how_key:'rooster_how',apple:'#',google:'#'},
-  {name:'Vibe',emoji:'V',cat:'dating',gradient:'from-slate-900 to-slate-700',desc_key:'vibe_desc',how_key:'vibe_how',apple:'#',google:'#'},
+  {name:'SOS Game',emoji:'🆘',gradient:'from-purple-600 via-cyan-700 to-emerald-700',desc_key:'sos_desc',how_key:'sos_how',apple:'#',google:'#'},
+  {name:'Tavla',emoji:'🎲',gradient:'from-purple-600 to-amber-600',desc_key:'tavla_desc',how_key:'tavla_how',apple:'#',google:'#'},
+  {name:'Hero Fly',emoji:'🛩️',gradient:'from-sky-500 to-yellow-500',desc_key:'herofly_desc',how_key:'herofly_how',apple:'#',google:'#'},
 ];
 
-let currentFilter = 'all';
-
-function renderApps(filter) {
+function renderApps() {
   const grid = document.getElementById('app-grid');
   grid.innerHTML = '';
-  const filtered = filter === 'all' ? apps : apps.filter(a => a.cat === filter);
-  filtered.forEach((app, i) => {
+  apps.forEach((app, i) => {
     const desc = i18n[currentLang][app.desc_key];
-    const how = i18n[currentLang][app.how_key];
-    const dl = i18n[currentLang]['play_store'];
-    const howText = i18n[currentLang]['how_to_play'];
     const appleText = i18n[currentLang]['apple_store'];
     const playText = i18n[currentLang]['play_store'];
     const card = document.createElement('div');
-    card.className = 'app-card glass rounded-2xl p-4 flex flex-col items-center text-center';
+    card.className = 'app-card glass rounded-2xl p-6 flex flex-col items-center text-center';
     card.style.animationDelay = (i * 0.05) + 's';
-    
+
     card.innerHTML = `
-      <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br ${app.gradient} flex items-center justify-center text-3xl sm:text-4xl mb-3 shadow-lg" style="${app.name === 'Vibe' ? 'font-size: 3rem; letter-spacing: -2px;' : ''}">${app.emoji}</div>
-      <h3 class="font-bold text-sm sm:text-base mb-1">${app.name}</h3>
-      <div class="inline-block bg-accent/20 text-accent text-[8px] font-bold px-2 py-1 rounded-full mb-2" data-i18n="coming_soon">Coming Soon</div>
-      <p class="text-[10px] sm:text-xs opacity-50 mb-3 leading-tight">${desc}</p>
-      <div class="flex gap-2 w-full opacity-50 pointer-events-none">
-        <a href="${app.apple}" target="_blank" rel="noopener noreferrer" class="store-btn flex-1 flex items-center justify-center gap-1 bg-black/40 hover:bg-black/60 rounded-lg py-1.5 text-[9px] font-semibold text-white border border-white/10">
+      <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br ${app.gradient} flex items-center justify-center text-4xl sm:text-5xl mb-4 shadow-lg">${app.emoji}</div>
+      <h3 class="font-bold text-base sm:text-lg mb-1">${app.name}</h3>
+      <div class="inline-block bg-accent/20 text-accent text-[9px] font-bold px-2 py-1 rounded-full mb-3" data-i18n="coming_soon">Coming Soon</div>
+      <p class="text-xs sm:text-sm opacity-60 mb-4 leading-snug">${desc}</p>
+      <div class="flex gap-2 w-full opacity-50 pointer-events-none mt-auto">
+        <a href="${app.apple}" target="_blank" rel="noopener noreferrer" class="store-btn flex-1 flex items-center justify-center gap-1 bg-black/40 hover:bg-black/60 rounded-lg py-1.5 text-[10px] font-semibold text-white border border-white/10">
           <i data-lucide="apple" style="width: 14px; height: 14px;"></i>
           <span>${appleText}</span>
         </a>
-        <a href="${app.google}" target="_blank" rel="noopener noreferrer" class="store-btn flex-1 flex items-center justify-center gap-1 bg-black/40 hover:bg-black/60 rounded-lg py-1.5 text-[9px] font-semibold text-white border border-white/10">
+        <a href="${app.google}" target="_blank" rel="noopener noreferrer" class="store-btn flex-1 flex items-center justify-center gap-1 bg-black/40 hover:bg-black/60 rounded-lg py-1.5 text-[10px] font-semibold text-white border border-white/10">
           <i data-lucide="play" style="width: 14px; height: 14px;"></i>
           <span>${playText}</span>
         </a>
@@ -279,21 +262,8 @@ function renderApps(filter) {
   setTimeout(() => lucide.createIcons(), 0);
 }
 
-// === Filter Tabs ===
-document.getElementById('filter-tabs').addEventListener('click', e => {
-  const btn = e.target.closest('.filter-btn');
-  if (!btn) return;
-  currentFilter = btn.dataset.filter;
-  document.querySelectorAll('.filter-btn').forEach(b => {
-    b.className = b === btn
-      ? 'filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-accent text-white'
-      : 'filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-white/5 hover:bg-white/10';
-  });
-  renderApps(currentFilter);
-});
-
 // Initialize apps on load
-renderApps(currentFilter);
+renderApps();
 lucide.createIcons();
 applyLang(currentLang);
 
@@ -361,16 +331,6 @@ document.getElementById('contact-form').addEventListener('submit', async e => {
     c.appendChild(s);
   }
 })();
-
-// === Promo carousel dot sync ===
-let promoIndex = 0;
-setInterval(() => {
-  promoIndex = (promoIndex + 1) % 3;
-  document.querySelectorAll('#promo-dots span').forEach((d, i) => {
-    d.className = i === promoIndex ? 'w-2 h-2 rounded-full bg-accent transition' : 'w-2 h-2 rounded-full bg-white/30 transition';
-  });
-}, 4000);
-
 
 // === Element SDK ===
 const defaultConfig = {
