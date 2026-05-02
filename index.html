@@ -238,7 +238,7 @@ function renderApps() {
     card.style.animationDelay = (i * 0.05) + 's';
 
     card.innerHTML = `
-      <img src="${app.icon}" alt="${app.name} logo" class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl mb-4 shadow-lg object-cover" loading="lazy">
+      <img src="${app.icon}" alt="${app.name} logo" class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl mb-4 shadow-lg object-cover ring-1 ring-white/15" loading="lazy">
       <h3 class="font-bold text-base sm:text-lg mb-1">${app.name}</h3>
       <div class="inline-block bg-accent/20 text-accent text-[9px] font-bold px-2 py-1 rounded-full mb-3" data-i18n="coming_soon">Coming Soon</div>
       <p class="text-xs sm:text-sm opacity-60 mb-4 leading-snug">${desc}</p>
