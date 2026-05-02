@@ -65,11 +65,7 @@ tailwind.config={theme:{extend:{colors:{bg:'#0a0a0f',surface:'#14141f',accent:'#
       <div class="flex flex-col sm:flex-row gap-4 justify-center"><a href="#apps" class="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-accent to-accent2 text-white hover:shadow-lg hover:shadow-accent/50 transition-all transform hover:scale-105" data-i18n="hero_cta1">Explore Apps</a> <a href="#why-us" class="px-8 py-3 rounded-xl font-semibold border border-accent/50 text-accent hover:bg-accent/10 transition" data-i18n="hero_cta2">Learn More</a>
       </div>
      </div><!-- Stats -->
-     <div class="mt-16 grid grid-cols-3 gap-4 sm:gap-8">
-      <div class="feature-card glass rounded-xl p-4 sm:p-6 text-center">
-       <p class="text-2xl sm:text-3xl font-extrabold gradient-text mb-1">3</p>
-       <p class="text-xs sm:text-sm opacity-50" data-i18n="stat_apps">Apps</p>
-      </div>
+     <div class="mt-16 grid grid-cols-2 gap-4 sm:gap-8 max-w-2xl mx-auto">
       <div class="feature-card glass rounded-xl p-4 sm:p-6 text-center">
        <p class="text-2xl sm:text-3xl font-extrabold gradient-text mb-1">175+</p>
        <p class="text-xs sm:text-sm opacity-50" data-i18n="stat_countries">Countries</p>
@@ -169,7 +165,7 @@ const i18n = {
     hero_subtitle:'Hemen indirmeye başla',
     hero_desc:'Apple ve Play Store\'da yakında yayında olacak özenle tasarlanmış oyunlar.',
     hero_cta1:'Uygulamaları Keşfet',hero_cta2:'Daha Fazla Bilgi',
-    stat_apps:'Uygulama',stat_countries:'Ülke',stat_stores:'Mağaza',
+    stat_countries:'Ülke',stat_stores:'Mağaza',
     whyus_title:'Neden Slafiy\'i Seç?',whyus_subtitle:'Özenle tasarlanmış oyunlar',
     whyus_fast_title:'Yıldırım Hızı',whyus_fast_desc:'Anında indir ve sorunsuz oyunla. Optimize edilmiş performans.',
     whyus_safe_title:'%100 Güvenli',whyus_safe_desc:'Tüm uygulamalar doğrulandı ve test edildi. Verileriniz güvende.',
@@ -190,7 +186,7 @@ const i18n = {
     hero_subtitle:'Start downloading now',
     hero_desc:'Thoughtfully crafted games launching soon on Apple & Play Store.',
     hero_cta1:'Explore Apps',hero_cta2:'Learn More',
-    stat_apps:'Apps',stat_countries:'Countries',stat_stores:'App Stores',
+    stat_countries:'Countries',stat_stores:'App Stores',
     whyus_title:'Why Choose Slafiy?',whyus_subtitle:'Thoughtfully crafted games',
     whyus_fast_title:'Lightning Fast',whyus_fast_desc:'Instant downloads and smooth gameplay with optimized performance.',
     whyus_safe_title:'100% Safe',whyus_safe_desc:'All apps are verified and tested. Your data and privacy are protected.',
@@ -225,9 +221,9 @@ function applyLang(lang) {
 
 // === App Data ===
 const apps = [
-  {name:'SOS Game',emoji:'🆘',gradient:'from-purple-600 via-cyan-700 to-emerald-700',desc_key:'sos_desc',how_key:'sos_how',apple:'#',google:'#'},
-  {name:'Tavla',emoji:'🎲',gradient:'from-purple-600 to-amber-600',desc_key:'tavla_desc',how_key:'tavla_how',apple:'#',google:'#'},
-  {name:'Hero Fly',emoji:'🛩️',gradient:'from-sky-500 to-yellow-500',desc_key:'herofly_desc',how_key:'herofly_how',apple:'#',google:'#'},
+  {name:'SOS Game',icon:'/assets/icons/sosgame.png',desc_key:'sos_desc',how_key:'sos_how',apple:'#',google:'#'},
+  {name:'Tavla',icon:'/assets/icons/tavla.png',desc_key:'tavla_desc',how_key:'tavla_how',apple:'#',google:'#'},
+  {name:'Hero Fly',icon:'/assets/icons/herofly.png',desc_key:'herofly_desc',how_key:'herofly_how',apple:'#',google:'#'},
 ];
 
 function renderApps() {
@@ -242,7 +238,7 @@ function renderApps() {
     card.style.animationDelay = (i * 0.05) + 's';
 
     card.innerHTML = `
-      <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br ${app.gradient} flex items-center justify-center text-4xl sm:text-5xl mb-4 shadow-lg">${app.emoji}</div>
+      <img src="${app.icon}" alt="${app.name} logo" class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl mb-4 shadow-lg object-cover" loading="lazy">
       <h3 class="font-bold text-base sm:text-lg mb-1">${app.name}</h3>
       <div class="inline-block bg-accent/20 text-accent text-[9px] font-bold px-2 py-1 rounded-full mb-3" data-i18n="coming_soon">Coming Soon</div>
       <p class="text-xs sm:text-sm opacity-60 mb-4 leading-snug">${desc}</p>
