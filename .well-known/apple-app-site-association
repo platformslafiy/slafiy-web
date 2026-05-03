@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["7VGJZ64HSQ.com.slafiy.sosgame"],
+        "components": [
+          {
+            "/": "/apps/sosgame/join/*",
+            "comment": "SOS Game oda davet linkleri"
+          }
+        ]
+      }
+    ]
+  }
+}
