@@ -32,7 +32,6 @@
   </style>
   <script>
     var roomId = '';
-    var autoTriggered = false;
 
     function isIOS() {
       return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
@@ -46,10 +45,9 @@
         document.getElementById('room-code').textContent = roomId;
 
         if (isIOS()) {
-          setTimeout(function() {
-            autoTriggered = true;
-            window.location = 'sosgame://join/' + roomId;
-          }, 200);
+          // Universal Link'in doğal akışı çalışsın diye custom scheme tetikleme yapılmıyor.
+          // iOS bu sayfayı zaten Universal Link verifikasyonundan geçiriyor;
+          // app yüklüyse banner gösterir veya direkt geçer.
         }
       } else {
         document.getElementById('room-code').textContent = '??????';
