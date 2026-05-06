@@ -32,6 +32,11 @@
   </style>
   <script>
     var roomId = '';
+    var autoTriggered = false;
+
+    function isIOS() {
+      return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    }
 
     window.onload = function() {
       var params = new URLSearchParams(window.location.search);
@@ -39,6 +44,13 @@
 
       if (roomId && roomId.length === 6) {
         document.getElementById('room-code').textContent = roomId;
+
+        if (isIOS()) {
+          setTimeout(function() {
+            autoTriggered = true;
+            window.location = 'sosgame://join/' + roomId;
+          }, 200);
+        }
       } else {
         document.getElementById('room-code').textContent = '??????';
         document.getElementById('open-btn').disabled = true;
@@ -48,14 +60,7 @@
 
     function openApp() {
       if (!roomId) return;
-      // iframe trick - sayfayı değiştirmeden uygulamayı aç
-      var iframe = document.createElement('iframe');
-      iframe.style.display = 'none';
-      iframe.src = 'sosgame://join/' + roomId;
-      document.body.appendChild(iframe);
-      setTimeout(function() {
-        document.body.removeChild(iframe);
-      }, 2000);
+      window.location = 'sosgame://join/' + roomId;
     }
   </script>
 </head>
