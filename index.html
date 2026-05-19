@@ -15,7 +15,7 @@ html,body{margin:0;padding:0;height:100%;font-family:'Outfit',sans-serif}
 .glass{background:rgba(20,20,31,.7);backdrop-filter:blur(16px);border:1px solid rgba(108,92,231,.15)}
 .glow{box-shadow:0 0 40px rgba(108,92,231,.15)}
 .app-card{transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden;animation:slideIn .6s ease-out forwards}
-.app-card::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(108,92,231,.1),transparent);opacity:0;transition:opacity .3s}
+.app-card::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(108,92,231,.1),transparent);opacity:0;transition:opacity .3s;pointer-events:none}
 .app-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 12px 40px rgba(108,92,231,.25)}
 .app-card:hover::before{opacity:1}
 .store-btn{transition:all .2s}
